@@ -1,6 +1,7 @@
 <script setup>
-import HomePage from './home/HomePage.vue';
-import RobotBuilder from './build/RobotBuilder.vue';
+// import HomePage from './home/HomePage.vue';
+// import RobotBuilder from './build/RobotBuilder.vue';
+import Search from './search/Search.vue';
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import RobotBuilder from './build/RobotBuilder.vue';
   </header>
 
   <main>
-    <RobotBuilder />
+    <Search />
   </main>
 </template>
 
