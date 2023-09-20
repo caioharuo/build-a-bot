@@ -28,6 +28,9 @@ body {
 #app {
   font-family: Arial, Helvetica, sans-serif;
 }
+</style>
+
+<style scoped>
 main {
   margin: 0 auto;
   padding: 30px;
