@@ -10,6 +10,11 @@
             Build-a-bot
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" :to="{ name: 'Build' }">
+            Build
+          </router-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -45,6 +50,7 @@ header {
 ul {
   padding: 3px;
   display: flex;
+  align-items: center;
 }
 .nav-item {
   display: inline-block;
@@ -59,5 +65,8 @@ ul {
 .nav-link {
   text-decoration: none;
   color: inherit;
+}
+.router-link-active {
+  color: white;
 }
 </style>
