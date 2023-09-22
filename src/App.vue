@@ -1,6 +1,4 @@
-<script setup>
-import RobotBuilder from './build/RobotBuilder.vue';
-</script>
+<script setup></script>
 
 <template>
   <header>
@@ -15,7 +13,7 @@ import RobotBuilder from './build/RobotBuilder.vue';
   </header>
 
   <main>
-    <RobotBuilder />
+    <router-view />
   </main>
 </template>
 
