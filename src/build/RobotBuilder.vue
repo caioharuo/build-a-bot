@@ -62,7 +62,7 @@ import CollapsibleSection from '../shared/CollapsibleSection.vue';
 export default {
   name: 'RobotBuilder',
   created() {
-    this.$store.dispatch('getParts');
+    this.$store.dispatch('robots/getParts');
   },
   beforeRouteLeave(_to, _from, next) {
     if (this.addedToCar) {
@@ -92,7 +92,7 @@ export default {
   mixins: [createdHookMixin],
   computed: {
     availableParts() {
-      return this.$store.state.parts;
+      return this.$store.state.robots.parts;
     },
     saleBorderClass() {
       return this.selectedRobot.head.onSale && 'sale-border';
@@ -109,7 +109,7 @@ export default {
         robot.base.cost;
 
       this.$store
-        .dispatch('addRobotToCart', { ...robot, cost })
+        .dispatch('robots/addRobotToCart', { ...robot, cost })
         .then(() => this.$router.push('/cart'));
 
       this.addedToCar = true;
