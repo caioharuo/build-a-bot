@@ -21,6 +21,12 @@ export default createStore({
         .then((result) => commit('updateParts', result.data))
         .catch(console.error);
     },
+    async addRobotToCart({ commit, state }, robot) {
+      const cart = [...state.cart, robot];
+      return axios
+        .post('/api/cart', cart)
+        .then(() => commit('addRobotToCart', robot));
+    },
   },
   getters: {
     cartSaleItems(state) {
