@@ -1,4 +1,13 @@
-<script setup></script>
+<script>
+export default {
+  name: 'app',
+  computed: {
+    cart() {
+      return this.$store.state.cart;
+    },
+  },
+};
+</script>
 
 <template>
   <header>
@@ -14,6 +23,12 @@
           <router-link class="nav-link" :to="{ name: 'Build' }">
             Build
           </router-link>
+        </li>
+        <li class="nav-item cart">
+          <router-link class="nav-link" to="/cart">Cart</router-link>
+          <div class="cart-items">
+            {{ cart.length }}
+          </div>
         </li>
       </ul>
     </nav>
@@ -62,6 +77,12 @@ ul {
   padding: 5px 10px;
   font-size: 22px;
   border-right: 1px solid #bbb;
+
+  &.cart {
+    position: relative;
+    margin-left: auto;
+    border-right: none;
+  }
 }
 .logo {
   vertical-align: middle;
@@ -84,5 +105,17 @@ aside {
   background-color: #aaa;
   width: 100px;
   min-height: 300px;
+}
+.cart-items {
+  position: absolute;
+  top: -5px;
+  right: -9px;
+  font-size: 18px;
+  color: white;
+  width: 20px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: mediumseagreen;
 }
 </style>
