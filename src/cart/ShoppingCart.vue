@@ -14,7 +14,7 @@
             {{ robot.head.title }}
           </td>
           <td class="cost">
-            {{ robot.cost }}
+            {{ $filters.currency(robot.cost, '$') }}
           </td>
         </tr>
       </tbody>
@@ -33,7 +33,7 @@
             {{ robot.head.title }}
           </td>
           <td class="cost">
-            {{ robot.cost }}
+            {{ $filters.currency(robot.cost, '$') }}
           </td>
         </tr>
       </tbody>
